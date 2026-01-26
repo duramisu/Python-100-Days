@@ -1,0 +1,9 @@
+{
+    "animations.CursorAnimation": true,
+    "animations.CursorAnimationOptions": {
+        "CursorStyle": "line",
+        "TrailLength": 8,
+        "Color": "#e13aed"
+    },
+    "animations.UseCursorColorForCursorAnimation": true
+}
