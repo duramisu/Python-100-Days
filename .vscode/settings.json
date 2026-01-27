@@ -1,8 +1,8 @@
 {
     "animations.CursorAnimation": true,
     "animations.CursorAnimationOptions": {
-        "TrailLength": 8,
-        "Color": "#e13aed"
+        "Color": "#CCE5FF",
+        "TrailLength": 35
     },
     "animations.UseCursorColorForCursorAnimation": false,
     "animations.Active": "Scale",

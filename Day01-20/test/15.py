@@ -3,6 +3,8 @@ import random
 import string
 
 ALL_CHAR = string.ascii_letters+string.digits
+
+
 def generate_code(code_len=4):
     '''生成随机验证码'''
     code = ''
@@ -15,6 +17,7 @@ def generate_code(code_len=4):
 def main():
     for _ in range(10):
         print(generate_code(6))
+
 
 if __name__ == '__main__':
     main()
