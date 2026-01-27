@@ -1,6 +1,8 @@
 """
 bmi 计算器
 """
+
+
 def bmi_calculator():
     height = float(input("请输入您的身高(cm): "))
 
@@ -8,14 +10,17 @@ def bmi_calculator():
 
     bmi = weight / (height / 100) ** 2
 
-    print(f"{bmi = :.1f}")
+    print(f"{bmi=:.1f}")
 
     if 18.5 <= bmi < 24:
         print("你的身材很棒！")
 
+
 """
 状态码判定测试
 """
+
+
 def status_code_test():
     status_code = int(input("请输入状态码: "))
     match status_code:
@@ -36,6 +41,7 @@ def status_code_test():
             print("未知错误")
     print("状态码描述："+description)
 
+
 """
 要求：
 如果输入的成绩在90分以上（含90分），则输出A；
@@ -44,6 +50,8 @@ def status_code_test():
 输入的成绩在60分到70分之间（不含70分），则输出D；
 输入的成绩在60分以下，则输出E。
 """
+
+
 def score_to_grade():
     score = int(input("请输入成绩: "))
     if score >= 90:
@@ -61,12 +69,14 @@ def score_to_grade():
     elif score < 60:
         print("E")
         grade = "不及格"
-    print(f'{ grade = }')
+    print(f'{grade=}')
 
 
 """
 主函数
 """
+
+
 def main():
     score_to_grade()
 
