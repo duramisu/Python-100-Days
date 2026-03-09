@@ -8,29 +8,19 @@ class Person:
     def speak(self, msg):
         print(f'我叫{self.name}， 年龄是{self.age}， 性别是{self.gender}，我想说：{msg}')
 
-# 定义一个Student类（子类、派生类）， 继承自Person类（父类、超类、基类）
-
 
 class Student(Person):
     def __init__(self, name, age, gender, stu_id, grade):
         # 在子类中，有两种方法调用父类的初始化方法，来实现对继承属性name,age,gender的初始化操作
-        # super().__init__(name, age, gender)
-        Person.__init__(self, name, age, gender)
+        super().__init__(name, age, gender)
+        # Person.__init__(self, name, age, gender)
         self.stu_id = stu_id
         self.grade = grade
 
-    def study(self, course_name):
-        print(f'{self.name}正在学习{course_name}')
+    def study(self, msg):
+        super().speak(msg)
+        print(f'{self.name}正在学习{msg}')
 
 
-# 创建Student类的实例对象
 s1 = Student('李华', 16, '男', '2025001', '初二')
-print(s1.__dict__)
-print(type(s1))
-
-# 查找speak方法的过程：1.实例自身(s1) => 2.Student类 => 3.Person类
-s1.speak('Hello, World!')
-
-
-# 查找study方法的过程：1.实例自身(s1) => 2.Student类 => 3.Person类
 s1.study('Python程序设计')
