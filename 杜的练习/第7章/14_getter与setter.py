@@ -17,7 +17,15 @@ class Person:
         if 0 < age < Person.max_age:
             self._age = age
         else:
-            raise ValueError(f'年龄必须在0~{Person.max_age}之间')
+            print(f'年龄必须在0~{Person.max_age}之间')
+
+    @property
+    def idcard(self):
+        return self.__idcard
+
+    @idcard.setter
+    def idcard(self, idcard):
+        print('抱歉，身份证号码不允许修改')
 
 
 p1 = Person('张三', 18, '110333222323131')
@@ -25,3 +33,6 @@ p1 = Person('张三', 18, '110333222323131')
 print(p1.age)
 p1.age = 200
 print(p1.age)
+print(p1.idcard)
+
+p1.idcard = '110101199001011456'
