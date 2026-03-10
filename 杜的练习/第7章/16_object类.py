@@ -5,13 +5,18 @@ class Person:
         self.age = age
         self.gender = gender
 
+    def speak(self):
+        print(f'我叫{self.name}， 年龄是{self.age}， 性别是{self.gender}')
+
 # 验证一下：所有的类继承了object类
 # print(issubclass(Person, object))
 # print(issubclass(int, object))
 # print(issubclass(str, object))
 # print(issubclass(list, object))
-# print(issubclass(bool, object))
+# print(issubclass(dict, object))
 # print(issubclass(tuple, object))
+# print(issubclass(set, object))
+
 
 # 因为 object 是所有类的父类，所以 Python 中的所有对象，都间接是 object 类的实例。
 # p1 = Person('张三', 18, '男')
@@ -21,16 +26,13 @@ class Person:
 # print(isinstance(True, object))
 # print(isinstance(None, object))
 # print(isinstance([10, 20, 30], object))
-# print(isinstance({'吃饭','睡觉'}, object))
-
+# print(isinstance({'a': 1, 'b': 2}, object))
+# print(isinstance((10, 20, 30), object))
 # 所有对象都继承了object类所提供的：各种属性和方法，从而保证了每个对象都具备统一的基本能力
-# for key in object.__dict__:
-#     print(key)
-
 
 p1 = Person('张三', 18, '男')
-print(p1.__dict__)  # 对象身上自己的东西
-print(dir(p1))      # 对象可以访问到的东西（自己的、继承过来的）
+print(p1.__dict__)  # 对象身上自己的属性
+# print(dir(p1)) # 对象可以访问到的东西（自己的、继承过来的）
 
-print(p1.__str__())
-print(p1)
+# for key in dir(p1):
+#     print(key)

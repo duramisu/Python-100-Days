@@ -13,7 +13,7 @@ class Person:
 
     # 当执行len(Person的实例对象) 时调用
     def __len__(self):
-        return len(p1.__dict__)
+        return len(self.__dict__)
 
     # 当执行 Person实例对象1 < Person实例对象2 时调用
     def __lt__(self, other):
@@ -32,13 +32,12 @@ class Person:
         return f'您访问的{item}属性不存在'
 
 
-p1 = Person('张三', 22, '男')
-p2 = Person('李四', 22, '男')
-# print(p1)
-# print(p2)
-# res = len(p1)
-# print(res)
-# print(p1 < p2)
-# print(p1 > p2)
-# print(p1 == p2)
-print(p1.address)
+p1 = Person('张三', 18, '男')
+p2 = Person('李四', 22, '女')
+p3 = Person('张三', 18, '男')
+
+print(len(p1))
+print(p1 < p2)
+print(p1 > p2)
+print(p1 == p3)
+print(p1.woker)
