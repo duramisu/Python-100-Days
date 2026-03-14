@@ -2,12 +2,13 @@
     "animations.CursorAnimation": true,
     "animations.CursorAnimationOptions": {
         "Color": "#CCE5FF",
-        "TrailLength": 35
+        "TrailLength": 15
     },
     "animations.UseCursorColorForCursorAnimation": false,
     "animations.Active": "Scale",
     "animations.Auto-Install": true,
     "animations.Custom-CSS": true,
     "animations.Enabled": true,
-    "animations.Smooth-Mode": true
+    "animations.Smooth-Mode": true,
+    "animations.Default-Duration": 10
 }
